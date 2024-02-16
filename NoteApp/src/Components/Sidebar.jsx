@@ -32,7 +32,7 @@ function Sidebar() {
       >
         <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
           <div className="flex justify-center">
-            <span className="mx-2 text-2xl font-semibold text-blue-950  shadow-inner hover:translate-x-2 transition-all ">
+            <span className="mx-2 text-2xl font-semibold text-blue-950  shadow-inner  ">
               Notes App
             </span>
           </div>

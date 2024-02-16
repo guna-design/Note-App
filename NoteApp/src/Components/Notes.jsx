@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 
 import { NotesTaken } from "../Context/Notedata";
-import { useNavigate } from "react-router";
+
 
 function Notes() {
   let { data, setData } = useContext(NotesTaken);
@@ -22,28 +22,28 @@ function Notes() {
         <span className=" pl-4 "> recently viewed</span>
       </div>
 
-      <div class=" pl-8 flex sm:ml-64 overflow-x-scroll py-9  ">
+      <div class=" pl-8 flex sm:ml-64 overflow-x-scroll scrollbar-hide py-9  ">
         {data.map((e, i) => {
           return (
             <>
               <div class="p-4 rounded-lg ">
                 <div key={i}>
-                  <div class=" w-72 h-52 rounded-xl shadow-xl bg-white dark:bg-gray-800">
-                    <div className="p-6 text-lg flex-1 ">
-                      {e.title}
+                  <div class=" w-72 h-52 rounded-xl shadow-xl hover:translate-y-2 transition-all bg-white dark:bg-gray-800">
+                    <div className="p-6 text-lg   flex ">
+                      <div className="overflow-y-scroll scrollbar-hide  w-44">{e.title}</div>
                       <i
-                        className="fa fa-edit pl-20 pointer "
+                        className="fa fa-edit pl-20 pointer   "
                         onClick={() => {
                           navigate(`/edit/${i}`);
                         }}
                       ></i>
                       <i
-                        className="fa fa-trash pl-5 "
+                        className="fa fa-trash pl-5  "
                         onClick={() => handleDelete(i)}
                       ></i>
                     </div>
 
-                    <div class="p-4  overflow-auto h-32 ...">{e.note}</div>
+                    <div class="p-4  overflow-auto  h-32 ...">{e.note}</div>
                   </div>
                 </div>
               </div>

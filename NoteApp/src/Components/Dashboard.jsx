@@ -5,7 +5,7 @@ import Notes from "./Notes";
 function Dashboard() {
   return (
     <>
-      <div className="w-full pl-6 ">
+      <div className="w-full p-4 ">
         {" "}
         <AddNotes />
       </div>
